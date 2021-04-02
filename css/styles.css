@@ -68,11 +68,27 @@
     color: #fff;
     padding: 20px;
     margin: 5px;
-    width: 200px;
-    height: 50px;
+    height: 30px;
+
+    flex-grow: 1;/*O 'flex-grow' é uma propriedade usada para definir a distribuição da largura dos elementos. Com o valor 0, é definido como padrão, valor 1 - é como eu estivesse determinando a largura igualmente distribuida para todos os elementos, se eu especificar em apenas um elemento com um 'flex-grow: 2;' eu estou dizendo que tal elemento vai possuir uma largura de duas vezes mais com relação ao outro elemento.*/
+
+    flex-shrink: 1;/*Determina um tamanho menor dos itens*/
+    flex-basis: 300px;/*Largura inicial dos itens*/
+
+    flex: 1 1 300px;/*Essa é a forma resumida de escrever as três propriedades, a flex-grow, flex-shrink, e a flex-basis.*/
 }
 
 .article-01 {
     padding-top: 40px;
 
 }
+
+/*
+O 'order' serve para indicar a ordem do posicionamentos dos elementos.
+
+O 'align-self: flex-end;' - Serve para determinar o alinhamento de um elemento em específico. 
+*/
+.article-01{order: 3; /*flex-grow: 2;*/ flex-shrink: 3;}
+.article-02{order: 1; align-self: auto;}
+.article-03{order: 2;}
+.article-04{order: 4;}
